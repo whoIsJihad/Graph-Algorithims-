@@ -2,6 +2,8 @@
 #define iPair pair<int, int>
 using namespace std;
 
+//takes the vector of graph and the source node and returns the minimum spanning tree value
+
 int primsAlgo(vector<vector<pair<int, int>>> &graph, int src = 0)
 {
     int n = graph.size();

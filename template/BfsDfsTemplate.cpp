@@ -40,3 +40,29 @@ void DFS(int source, vector<vector<int>> &graph, vector<bool> &visited, vector<i
     }
 }
 
+int main(){
+    
+    int m,n;
+    cin>>n>>m;
+    vector<vector<int>> graph(n);
+    for(int i=0;i<m;i++){
+        int x,y;
+        cin>>x>>y;
+        graph[x].push_back(y);
+        // graph[y].push_back(x);
+    }
+    vector<bool> visited(n, false);
+    vector<int> bfs,dfs;
+    BFS(0,graph,visited,bfs);
+    fill(visited.begin(),visited.end(),false);
+    DFS(0,graph,visited,dfs);
+
+    cout<<"BFS : ";
+
+    for(auto x:bfs) cout<<x<<" ";
+    cout<<endl;
+    cout<<"DFS : ";
+    for(auto x:dfs) cout<<x<<" ";
+    cout<<endl;
+
+}

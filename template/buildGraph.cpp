@@ -18,6 +18,7 @@ vector<vector<int>> buildGraph()
     return Graph;
 }
 
+
 vector<vector<pair<int,int>>>buildGraphW(){
     int m,n;
     cin>>n>>m;
